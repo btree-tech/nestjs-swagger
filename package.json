@@ -7,6 +7,7 @@
   "repository": "https://github.com/nestjs/swagger",
   "scripts": {
     "build": "tsc -p tsconfig.json",
+    "prepare": "npm run build",
     "format": "prettier lib/**/*.ts --write",
     "prepublish:next": "npm run build",
     "publish:next": "npm publish --access public --tag next",
@@ -14,6 +15,7 @@
     "publish:npm": "npm publish --access public",
     "test": "jest --config jest.json"
   },
+  "main": "dist/index.js",
   "dependencies": {
     "lodash": "4.17.15",
     "path-to-regexp": "3.0.0"
